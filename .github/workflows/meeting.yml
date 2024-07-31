@@ -1,0 +1,90 @@
+﻿name: Weekly Team Session
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Every 5 minutes (for testing)
+#    - cron: 20 07 * * 1 # Every Monday, at 7:20 AM
+
+jobs:
+  create_issue:
+    name: Create team sync issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create team sync issue
+        run: |
+          if [[ $CLOSE_PREVIOUS == true ]]; then
+            previous_issue_number=$(gh issue list \
+              --label "$LABELS" \
+              --json number \
+              --jq '.[0].number')
+            if [[ -n $previous_issue_number ]]; then
+              gh issue close "$previous_issue_number"
+              gh issue unpin "$previous_issue_number"
+            fi
+          fi
+          new_issue_url=$(gh issue create \
+            --title "$TITLE" \
+            --assignee "$ASSIGNEES" \
+            --label "$LABELS" \
+            --body "$BODY")
+          if [[ $PINNED == true ]]; then
+            gh issue pin "$new_issue_url"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          TITLE: Team session - $(date +'%Y-%m-%d')
+          ASSIGNEES: RogerHowellDfE
+          LABELS: weekly collaboration,meeting-agenda
+          BODY: |
+            ### Pre-meet
+            - [ ] 🤠 Meeting planner defined
+                - Who:
+            - [ ] ✏️ Curate speaker list
+                - Number of sessions
+                - Short vs double (vs half-length) sessions
+                - Where possible, include brief notes about each session's topic below
+            - [ ] 📅 Ensure MS Teams meeting exists
+                - Link:
+            
+            
+            ### Agenda
+            
+            - [ ] 🎥 Start the recording
+            - [ ] 👋 Introductions (few mins)
+            - [ ] 1️⃣ Slot 1 (up-to 12mins)
+                - Leader:
+                - Topic:
+            - [ ] 2️⃣ Slot 2 (up-to 12mins)
+                - Leader:
+                - Topic:
+            - [ ] 3️⃣ Slot 3 (up-to 12mins)
+                - Leader:
+                - Topic:
+            - [ ] 🚪 AOB and closing (5-15mins)
+            
+            
+            ### Useful notes, links, and interesting discussion points
+            
+            - Session 1
+            - Session 2
+            - Session 3
+            - AOB
+            
+            
+            ### Post-meet
+            
+            - [ ] 💾 Store recording
+                - Location:
+            - [ ] 📜 Archive notes
+                - Location:
+            - [ ] 📅 Confirm date of next meeting
+                - Date:
+            - [ ] 🤠 Confirm "planner" of next meeting
+                - Who:
+            - [ ] 🔐 Close GitHub issue for session
+      
+      
+          PINNED: false
+          CLOSE_PREVIOUS: false
