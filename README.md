@@ -29,7 +29,7 @@ meetups, and other events organised by Data Directorate software developers.
   - This is also to help us share resources and ideas with team members who cannot attend live.
 
 
-## Indicative agenda (1hr slot)
+## Indicative session agenda (1hr slot)
 
 - [ ] 🎥 Start the recording
 - [ ] 👋 Introductions (few mins)
@@ -48,5 +48,15 @@ meetups, and other events organised by Data Directorate software developers.
 Note this is indicative only. 
 Sessions can be shorter/longer/doubled-up if required/requested.
 
+
+## Rotating through sessions
+
+If we run these sessions weekly, that is:
+- 4x sessions/meetings per month and 2-3x slots per session
+- ... that is 8-12 slots per month
+  - roughly the whole team gets a slot every month (ish)
+  - noting that some slots might have multiple people present together, and some slots might be doubled-up
+  - also noting that some weeks we might have only a single slot, or potentially more (shorter) slots
+- Also means that everyone will be able to lead on a session at least a few times per year
 
 
