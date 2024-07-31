@@ -33,13 +33,13 @@ meetups, and other events organised by Data Directorate software developers.
 
 - [ ] 🎥 Start the recording
 - [ ] 👋 Introductions (few mins)
-- [ ] 1️⃣ Session 1 (up-to 14mins)
+- [ ] 1️⃣ Slot 1 (up-to 12mins)
   - Leader:
   - Topic:
-- [ ] 2️⃣ Session 2 (up-to 14mins)
+- [ ] 2️⃣ Slot 2 (up-to 12mins)
   - Leader:
   - Topic:
-- [ ] 3️⃣ Session 3 (up-to 14mins)
+- [ ] 3️⃣ Slot 3 (up-to 12mins)
   - Leader:
   - Topic:
 - [ ] 🚪 AOB and closing (5-15mins)
