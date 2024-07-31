@@ -11,6 +11,13 @@ meetups, and other events organised by Data Directorate software developers.
   - Longer sessions with fuller-presentations and deeper-dives are also very welcome,
     where we can double-up or extend a session.
 
+- Session ideas (work-related or otherwise!):
+  - Summary of a recent project or piece of work
+  - A YouTube video you found interesting
+  - A new tool or library you've been using
+  - A problem you're facing and would like help with
+  - A new idea you've had and would like to discuss
+  - Training or learning you've been doing
 
 - Not all sessions will be recorded, but those that are will be stored in the team's internal storage space.
    - These recordings will not be shared outside the team, unless explicitly agreed by all participants.
